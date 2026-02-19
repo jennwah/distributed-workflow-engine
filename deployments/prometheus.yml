@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: "workflow-api"
+    static_configs:
+      - targets: ["api:8080"]
+    metrics_path: /metrics
+
+  - job_name: "workflow-worker"
+    dns_sd_configs:
+      - names: ["worker"]
+        type: A
+        port: 9091
+    metrics_path: /metrics

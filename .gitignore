@@ -1,0 +1,9 @@
+bin/
+*.exe
+*.test
+*.out
+.env
+vendor/
+.DS_Store
+CLAUDE.md
+.claude
