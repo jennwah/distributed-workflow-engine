@@ -73,7 +73,7 @@ type WorkflowResponse struct {
 	CreatedAt   time.Time `json:"created_at"`
 }
 
-// EnqueueJob submits a new job to the workflow engine.
+// EnqueueJob submits a new job to the workflow engine
 func (c *Client) EnqueueJob(ctx context.Context, req *EnqueueJobRequest) (*JobResponse, error) {
 	body, err := json.Marshal(req)
 	if err != nil {
